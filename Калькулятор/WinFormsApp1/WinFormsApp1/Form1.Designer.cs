@@ -49,6 +49,7 @@
             btnSkobkaR = new Button();
             btnSkobkaL = new Button();
             panel1 = new Panel();
+            lbHistory = new ListBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -260,11 +261,22 @@
             panel1.Size = new Size(195, 70);
             panel1.TabIndex = 23;
             // 
+            // lbHistory
+            // 
+            lbHistory.FormattingEnabled = true;
+            lbHistory.ItemHeight = 15;
+            lbHistory.Location = new Point(230, 88);
+            lbHistory.Name = "lbHistory";
+            lbHistory.Size = new Size(140, 154);
+            lbHistory.TabIndex = 24;
+            lbHistory.SelectedIndexChanged += lbHistory_SelectedIndexChanged;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(266, 375);
+            ClientSize = new Size(378, 375);
+            Controls.Add(lbHistory);
             Controls.Add(panel1);
             Controls.Add(btnSkobkaL);
             Controls.Add(btnSkobkaR);
@@ -316,5 +328,6 @@
         private Button btnSkobkaR;
         private Button btnSkobkaL;
         private Panel panel1;
+        private ListBox lbHistory;
     }
 }
