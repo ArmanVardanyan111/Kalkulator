@@ -50,6 +50,7 @@
             btnSkobkaL = new Button();
             panel1 = new Panel();
             lbHistory = new ListBox();
+            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -271,11 +272,21 @@
             lbHistory.TabIndex = 24;
             lbHistory.SelectedIndexChanged += lbHistory_SelectedIndexChanged;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(270, 67);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 15);
+            label1.TabIndex = 25;
+            label1.Text = "История";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(378, 375);
+            Controls.Add(label1);
             Controls.Add(lbHistory);
             Controls.Add(panel1);
             Controls.Add(btnSkobkaL);
@@ -303,6 +314,7 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -329,5 +341,6 @@
         private Button btnSkobkaL;
         private Panel panel1;
         private ListBox lbHistory;
+        private Label label1;
     }
 }

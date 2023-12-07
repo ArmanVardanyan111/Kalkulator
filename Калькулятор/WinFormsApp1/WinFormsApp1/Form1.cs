@@ -69,6 +69,7 @@ namespace WinFormsApp1
 
         private void btnC_Click(object sender, EventArgs e)
         {
+            HistoryWriter(lblInfo.Text);
             lblInfo.Text = "";
         }
 
@@ -102,7 +103,20 @@ namespace WinFormsApp1
             try
             {
                 double result = EvaluateExpression(lblInfo.Text);
-                lblInfo.Text = result.ToString();
+                string resultStr = result.ToString();
+                string resultStr_ = "";
+                for (int i = 0; i < resultStr.Length; i++)
+                {
+                    if (resultStr[i] == ',')
+                    {
+                        resultStr_ += '.';
+                    }
+                    else
+                    {
+                        resultStr_ += resultStr[i];
+                    }
+                }
+                lblInfo.Text = resultStr_;
             }
             catch (Exception ex)
             {
